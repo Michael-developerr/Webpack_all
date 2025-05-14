@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "noImplicitAny": true,
+    "module": "ESNext",
+    "target": "es5",
+    "jsx": "react",
+    "allowJs": true,
+    "moduleResolution": "node",
+    //esModuleInterop позволяет работать с пакетами ,которые испольузуют common js как с обычными пакетами import(require() module.export) = common js
+    //import Moment from 'moment'
+    // без флага  esModuleInterop результат undefined
+    //console.log(Moment);
+    //с флагом резульат [object Object]
+    //console.log(Moment)
+    
+    "esModuleInterop": true,
+    //если какая либо библиотека не имеет default import ;
+    //лоадеры вроде ts-loader или babel-loader автоматиччески создают их
+    //вместо такого импорта 
+    //import *as React from 'react'
+    //можно писать такой 
+    //import React from 'react'
+    "allowSyntheticDefaultImports": true,
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  }
+}
+//на 41 итоги подводятся 
